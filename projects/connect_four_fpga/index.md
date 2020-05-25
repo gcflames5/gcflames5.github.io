@@ -42,6 +42,7 @@ Alpha-beta pruning is a technique that can drastically decrease the number of no
 
 #### Base Design
 I've listed the resource usage of each major submodule below. In parenthesis next to each usage count is the % total of the total chip resources used on the "cost-optimized" XC7Z020 Xilinx FPGA. This chip also features two hard A9 ARM cores, one of which runs the high level application controlling the hardware.
+
 | Module        | Slice LUTs        | Slice Registers       | Total Slices      | BRAM Tiles        |
 | ------------- |-------------      | -----                 | ------            | -----             |
 | Stack Memory  | 150 (0.28%)       |  0 (0%)               | 70 (0.53%)        | 2.5 (1.69%)       |
@@ -58,6 +59,7 @@ The base design can reach a `minimax depth of 8` before the AI compute time exce
 
 #### Alpha-Beta Pruning Optimization
 I've recreated the base design resource usage table below for the alpha-beta pruning design.
+
 | Module        | Slice LUTs        | Slice Registers       | Total Slices      | BRAM Tiles        |
 | ------------- |-------------      | -----                 | ------            | -----             |
 | Stack Memory  | 215 (0.4%)        |  0 (0%)               | 99 (0.74%)        | 2.5 (1.69%)       |
@@ -67,6 +69,7 @@ I've recreated the base design resource usage table below for the alpha-beta pru
 | **Total**     | **1751 (3.29%)**  |  **1182 (1.11%)**     | **539 (4.05%)**   | **2.5 (1.69%)**   |
 
 For the sake of comparison, the following table shows the percent increase or decrease in resource usage relative to the base design:
+
 | Module        | Slice LUTs        | Slice Registers       | Total Slices      | BRAM Tiles        |
 | ------------- |-------------      | -----                 | ------            | -----             |
 | Base Total    | 1666 (3.13%)      |  1146 (1.08%)         | 510 (3.83%)       | 2.5 (1.69%)       |
